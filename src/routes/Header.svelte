@@ -2,9 +2,13 @@
 	import * as config from '$lib/config.js';
 </script>
 
+<svelte:head>
+	<title>{config.title}</title>
+</svelte:head>
+
 <nav class="py-8 sm:flex sm:justify-between">
-	<a href="/" class="text-2xl xl:text-3xl">
-		<b>{config.title}</b>
+	<a href="/">
+		<span class="font-bold text-2xl xl:text-3xl">{config.title}</span>
 	</a>
 
 	<ul class="mx-7 sm:flex sm:gap-8 sm:m-0">
@@ -19,5 +23,5 @@
 		</li>
 	</ul>
 
-	<button>Toggle</button>
+	<button class="border p-2">Toggle</button>
 </nav>

@@ -9,7 +9,8 @@ export const blogPosts = [
 		slug: 'building-a-blog',
 		metadata: {
 			title: 'Building a Blog in 2024',
-			description: 'How I made this blog site',
+			author: 'Brandon Johnson',
+			description: 'How/Why I made this blog site.',
 			date: '6/8/2024',
 			categories: ['svelte', 'markdown'],
 			published: true
@@ -20,6 +21,7 @@ export const blogPosts = [
 		slug: 'why-svelte',
 		metadata: {
 			title: 'Why Do I Like Svelte So Much Anyways?',
+			author: 'Brandon Johnson',
 			description: 'A breakdown of using Svelte for web development',
 			date: '6/8/2024',
 			categories: ['svelte'],

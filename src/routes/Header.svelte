@@ -1,5 +1,6 @@
 <script>
 	import * as config from '$lib/config.js';
+	import Toggle from './Toggle.svelte';
 </script>
 
 <svelte:head>
@@ -11,6 +12,7 @@
 		<span class="font-bold text-2xl xl:text-3xl">{config.title}</span>
 	</a>
 
+	<!-- TODO: Add some info here
 	<ul class="mx-7 sm:flex sm:gap-8 sm:m-0">
 		<li>
 			<a class="text-inherit no-underline sm:text-lg" href="/about">About</a>
@@ -18,10 +20,7 @@
 		<li>
 			<a class="text-inherit no-underline sm:text-lg" href="/contact">Contact</a>
 		</li>
-		<li>
-			<a class="text-inherit no-underline sm:text-lg" href="/rss.xml" target="_blank">RSS</a>
-		</li>
-	</ul>
+	</ul> -->
 
-	<button class="border p-2">Toggle</button>
+	<Toggle />
 </nav>

@@ -2,6 +2,8 @@
 	import "../app.css";
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
+	import Transition from "./transition.svelte";
+	export let data;
 </script>
 
 <svelte:head>
@@ -13,7 +15,9 @@
 <div class="layout h-100 max-w-screen-2xl grid mx-auto py-8 px-2">
 	<Header/>
 	<main class="mt-10 mb-4 lg:px-0">
-		<slot />
+		<Transition url={data.url}>
+			<slot />
+		</Transition>
 	</main>
 	<Footer/>
 </div>

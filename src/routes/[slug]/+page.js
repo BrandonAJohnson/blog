@@ -5,7 +5,7 @@ import * as config from '$lib/config.js';
 export async function load({params}) {
 	try {
 		const post = await import(`../../posts/${params.slug}.md`);
-		const metadata = config.blogPosts.find(e => e.slug = params.slug)?.metadata;
+		const metadata = config.blogPosts.find(e => e.slug == params.slug)?.metadata;
 
 		if (!metadata.published) {
 			throw error(404, `Post not available ${params.slug}`);

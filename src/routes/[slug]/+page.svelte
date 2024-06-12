@@ -12,12 +12,11 @@
 {#if data.metadata}
 	<article class="max-w-7xl mx-auto">
 		<hgroup class="mb-8">
-			<h1 class="text-4xl dark:text-amber-400 mb-1">{data.metadata.title}</h1>
+			<h1 class="text-4xl dark:text-amber-400 text-blue-800 mb-1">{data.metadata.title}</h1>
 			<p class="text-sm">{data.metadata.author} {data.metadata.date}</p>
 			<div>
-				<!-- TODO: Change tags to a dynamic link that will open a new tab to show all the blogs within a specific category -->
 				{#each data.metadata.categories as category}
-					<span class="dark:text-slate-300 dark:bg-slate-900 text-slate-800 bg-slate-200 text-xs inline-flex gap-2 mx-1">&num;{category}</span>
+					<a href={`../categories/${category}`} class="dark:text-slate-300 dark:bg-slate-900 text-slate-800 bg-slate-200 text-xs inline-flex gap-2 mx-1 p-1 rounded">&num;{category}</a>
 				{/each}
 			</div>
 		</hgroup>
